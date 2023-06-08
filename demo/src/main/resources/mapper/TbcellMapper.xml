@@ -1,0 +1,17 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.TbcellMapper">
+    <select id="getallcell" resultType="String">
+        select DISTINCT SECTOR_ID from tbcell
+    </select>
+    <select id="gettbcell" resultType="com.example.demo.dom.tbcell">
+        select * from tbcell where SECTOR_ID =#{SECTOR_ID}
+    </select>
+    <select id="getallenodeb" resultType="String">
+        select DISTINCT ENODEB_ID from tbcell
+    </select>
+    <select id="gettbenodeb" resultType="com.example.demo.dom.tbcell">
+        select * from tbcell where ENODEB_ID =#{ENODEB_ID}
+    </select>
+</mapper>
